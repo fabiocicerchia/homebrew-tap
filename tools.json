@@ -1,0 +1,314 @@
+{
+  "_comment": [
+    "Every formula in this tap is generated from this file by scripts/render_formulae.py.",
+    "Add a tool here, not a .rb by hand \u2014 the renderer overwrites Formula/.",
+    "A tool whose latest release does not yet carry the files listed here is",
+    "skipped with a note, and picked up on the next run once it releases."
+  ],
+  "tools": [
+    {
+      "formula": "chaosbox",
+      "repo": "chaos-toolbox",
+      "kind": "shell",
+      "desc": "Small, time-boxed chaos experiments",
+      "license": "Apache-2.0",
+      "binaries": [
+        "chaosbox"
+      ],
+      "mans": [
+        "man/chaosbox.1"
+      ],
+      "linux_only": true,
+      "depends": [
+        "stress-ng"
+      ],
+      "caveats": "Network experiments need tc (iproute2) and CAP_NET_ADMIN.\n`chaosbox kill` needs docker or kubectl, depending on --mode.",
+      "help_flag": true
+    },
+    {
+      "formula": "netreport",
+      "repo": "mtr-toolbox",
+      "kind": "shell",
+      "desc": "One-shot connectivity snapshot for incident notes",
+      "license": "Apache-2.0",
+      "binaries": [
+        "netreport"
+      ],
+      "mans": [
+        "man/netreport.1"
+      ],
+      "linux_only": true,
+      "depends": [
+        "mtr"
+      ],
+      "caveats": "Uses ip(8) from iproute2 and dig(1); both are expected on the host.",
+      "help_flag": false
+    },
+    {
+      "formula": "cluster-collect",
+      "repo": "cluster-info-collector",
+      "kind": "shell",
+      "desc": "Gather a Kubernetes incident support bundle",
+      "license": "Apache-2.0",
+      "binaries": [
+        "cluster-collect"
+      ],
+      "mans": [
+        "man/cluster-collect.1"
+      ],
+      "depends": [
+        "kubernetes-cli"
+      ],
+      "extra_files": {
+        "lib.sh": "lib/cluster-info-collector"
+      },
+      "caveats": "Set BUNDLE_S3_URI to upload the bundle; that path needs the AWS CLI.",
+      "help_flag": false
+    },
+    {
+      "formula": "init-toolkit",
+      "repo": "init-toolkit",
+      "kind": "shell",
+      "desc": "Readiness and health-check probes for init containers",
+      "license": "Apache-2.0",
+      "binaries": [
+        "bin/wait-for",
+        "bin/healthcheck-http",
+        "bin/healthcheck-tcp"
+      ],
+      "mans": [
+        "man/wait-for.1",
+        "man/healthcheck-http.1",
+        "man/healthcheck-tcp.1"
+      ],
+      "test_binary": "wait-for",
+      "help_flag": true
+    },
+    {
+      "formula": "security-scanner-toolbox",
+      "repo": "security-scanner-toolbox",
+      "kind": "shell",
+      "desc": "Scan a container image with syft, grype, trivy and cosign",
+      "license": "Apache-2.0",
+      "binaries": [
+        "scan-image",
+        "verify-download"
+      ],
+      "mans": [
+        "man/scan-image.1",
+        "man/verify-download.1"
+      ],
+      "linux_only": true,
+      "depends": [
+        "syft",
+        "grype",
+        "trivy",
+        "cosign"
+      ],
+      "test_binary": "scan-image",
+      "caveats": "verify-download uses GNU sha256sum, which is why this is Linux-only.",
+      "help_flag": false
+    },
+    {
+      "formula": "portfwd",
+      "repo": "port-forward-manager",
+      "kind": "shell",
+      "desc": "Run several kubectl port-forwards from a profile, with auto-reconnect",
+      "license": "Apache-2.0",
+      "binaries": [
+        "portfwd"
+      ],
+      "mans": [
+        "man/portfwd.1"
+      ],
+      "depends": [
+        "kubernetes-cli"
+      ],
+      "help_flag": false
+    },
+    {
+      "formula": "envdiff",
+      "repo": "envdiff",
+      "kind": "python",
+      "desc": "Diff environment variables between two environments, safely",
+      "license": "Apache-2.0",
+      "binaries": [
+        "envdiff"
+      ],
+      "mans": [
+        "man/envdiff.1"
+      ]
+    },
+    {
+      "formula": "dockerfile-hardener",
+      "repo": "dockerfile-hardener",
+      "kind": "python",
+      "desc": "Rewrite a Dockerfile to best practice and show the diff",
+      "license": "Apache-2.0",
+      "binaries": [
+        "dockerfile-hardener"
+      ],
+      "mans": [
+        "man/dockerfile-hardener.1"
+      ]
+    },
+    {
+      "formula": "scoville",
+      "repo": "scoville",
+      "kind": "python",
+      "desc": "Rate how dangerous a shell command is, before you run it",
+      "license": "Apache-2.0",
+      "binaries": [
+        "scoville"
+      ],
+      "mans": [
+        "man/scoville.1"
+      ]
+    },
+    {
+      "formula": "rbac-audit",
+      "repo": "rbac-auditor",
+      "kind": "python",
+      "desc": "Readable RBAC reports from a live Kubernetes cluster",
+      "license": "Apache-2.0",
+      "binaries": [
+        "rbac-audit"
+      ],
+      "mans": [
+        "man/rbac-audit.1"
+      ],
+      "depends": [
+        "kubernetes-cli"
+      ]
+    },
+    {
+      "formula": "toil-audit",
+      "repo": "toil-audit",
+      "kind": "python",
+      "desc": "Quantify the cost of babysitting CI/CD, in euros",
+      "license": "Apache-2.0",
+      "binaries": [
+        "toil-audit"
+      ],
+      "mans": [
+        "man/toil-audit.1"
+      ]
+    },
+    {
+      "formula": "claude-keepalive",
+      "repo": "claude-keepalive",
+      "kind": "python",
+      "desc": "Run claude and auto-resume after a usage-limit reset",
+      "license": "MIT",
+      "binaries": [
+        "claude-keepalive"
+      ],
+      "mans": [
+        "man/claude-keepalive.1"
+      ]
+    },
+    {
+      "formula": "arch-map",
+      "repo": "arch-map",
+      "kind": "python",
+      "desc": "A living C4-style container diagram from real infrastructure",
+      "license": "Apache-2.0",
+      "binaries": [
+        "arch-map"
+      ],
+      "mans": [
+        "man/arch-map.1"
+      ]
+    },
+    {
+      "formula": "greenlint",
+      "repo": "greenlint",
+      "kind": "python",
+      "desc": "Static linter for carbon-inefficient code and CI",
+      "license": "Apache-2.0",
+      "binaries": [
+        "greenlint"
+      ],
+      "mans": [
+        "man/greenlint.1"
+      ]
+    },
+    {
+      "formula": "sbom-diff",
+      "repo": "sbom-diff",
+      "kind": "python",
+      "desc": "Diff two SBOMs and explain the changes in plain language",
+      "license": "Apache-2.0",
+      "binaries": [
+        "sbom-diff"
+      ],
+      "mans": [
+        "man/sbom-diff.1"
+      ]
+    },
+    {
+      "formula": "automap",
+      "repo": "automap",
+      "kind": "python",
+      "desc": "Generate an architecture map from a source tree",
+      "license": "Apache-2.0",
+      "binaries": [
+        "automap"
+      ],
+      "mans": [
+        "man/automap.1"
+      ]
+    },
+    {
+      "formula": "backup-verify",
+      "repo": "backup-verify",
+      "kind": "python",
+      "desc": "Prove that your backups restore, on a schedule",
+      "license": "Apache-2.0",
+      "binaries": [
+        "backup-verify"
+      ],
+      "mans": [
+        "man/backup-verify.1"
+      ],
+      "resources": [
+        "pyyaml"
+      ]
+    },
+    {
+      "formula": "k8s-rightsizer-report",
+      "repo": "k8s-rightsizer-report",
+      "kind": "python",
+      "desc": "Turn live Kubernetes usage into PR-ready requests and limits",
+      "license": "Apache-2.0",
+      "binaries": [
+        "k8s-rightsizer-report"
+      ],
+      "mans": [
+        "man/k8s-rightsizer-report.1"
+      ],
+      "depends": [
+        "kubernetes-cli"
+      ],
+      "resources": [
+        "pyyaml"
+      ]
+    },
+    {
+      "formula": "cron-translate",
+      "repo": "cron-translate",
+      "kind": "python",
+      "desc": "Cron expressions in human terms",
+      "license": "Apache-2.0",
+      "binaries": [
+        "cron-translate"
+      ],
+      "mans": [
+        "man/cron-translate.1"
+      ],
+      "resources": [
+        "croniter"
+      ]
+    }
+  ]
+}

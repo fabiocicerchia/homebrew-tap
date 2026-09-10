@@ -1,0 +1,64 @@
+name: update formulae
+
+# The casks in this tap are pushed by each tool's own release (goreleaser).
+# The formulae are not: they build from a source tarball, so they need the tag
+# and the tarball's sha256 refreshed whenever a tool releases. This job does
+# that from one place, with this repository's own GITHUB_TOKEN — which is why
+# no tool repository needs a token to keep its formula current.
+#
+# It is also how a tool that is not ready yet joins the tap: the renderer skips
+# any tool whose latest release does not carry the files tools.json expects,
+# and picks it up on the next run once it does.
+
+on:
+  schedule:
+    # Daily, a few minutes after the hour to avoid the on-the-hour rush.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tools.json
+      - scripts/render_formulae.py
+      - .github/workflows/update-formulae.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: update-formulae
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # commit the regenerated formulae
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: "3.13"
+
+      - name: Render
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/render_formulae.py | tee render.log
+
+      - name: Commit any change
+        run: |
+          if git diff --quiet -- Formula; then
+            echo "formulae already current"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Formula
+          # The log names which tools moved and which are still waiting, so the
+          # commit says why it exists without anyone re-running the renderer.
+          git commit -F - <<EOF
+          chore: refresh the formulae
+
+          $(grep -E '^(wrote|pending)' render.log)
+          EOF
+          git push
