@@ -4,8 +4,8 @@ class CronTranslate < Formula
 
   desc "Cron expressions in human terms"
   homepage "https://github.com/fabiocicerchia/cron-translate"
-  url "https://github.com/fabiocicerchia/cron-translate/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "f213ccbbed015721f9e12517585bae33f7d3d36910d6b8f7b552daedc240c871"
+  url "https://github.com/fabiocicerchia/cron-translate/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "3e5899092d323b317a77b7b3fad39e79c614743c6b3fbb98a62ee2191c5d7ea2"
   license "Apache-2.0"
 
   depends_on "python@3.13"

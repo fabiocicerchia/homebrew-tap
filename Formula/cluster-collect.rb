@@ -2,8 +2,8 @@
 class ClusterCollect < Formula
   desc "Gather a Kubernetes incident support bundle"
   homepage "https://github.com/fabiocicerchia/cluster-info-collector"
-  url "https://github.com/fabiocicerchia/cluster-info-collector/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "cfed3d9665caddf0a2fa4e97bd179a114a8250351aa554ce992a5acfba88a8fb"
+  url "https://github.com/fabiocicerchia/cluster-info-collector/archive/refs/tags/v1.0.2.tar.gz"
+  sha256 "b60beb7046baa592b74025fd85575ec77e5d9ddea12f82e27640d3680efa3d8b"
   license "Apache-2.0"
 
   depends_on "kubernetes-cli"

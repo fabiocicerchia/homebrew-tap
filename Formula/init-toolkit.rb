@@ -2,8 +2,8 @@
 class InitToolkit < Formula
   desc "Readiness and health-check probes for init containers"
   homepage "https://github.com/fabiocicerchia/init-toolkit"
-  url "https://github.com/fabiocicerchia/init-toolkit/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "297cad3e7fa7ea7abfbb5769e3644c663ca7da21c27462f57bf3843b0137f0c8"
+  url "https://github.com/fabiocicerchia/init-toolkit/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "54cb1d6f4ccf377a94abff85b94aeeb99aebc90793a8e85e829f3c8a51c348a1"
   license "Apache-2.0"
 
 

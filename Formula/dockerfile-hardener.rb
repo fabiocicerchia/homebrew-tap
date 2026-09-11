@@ -4,8 +4,8 @@ class DockerfileHardener < Formula
 
   desc "Rewrite a Dockerfile to best practice and show the diff"
   homepage "https://github.com/fabiocicerchia/dockerfile-hardener"
-  url "https://github.com/fabiocicerchia/dockerfile-hardener/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "be54a26a87df9f826cdd69690b567ed0232bbdf1406d669da624c6b59e0495fb"
+  url "https://github.com/fabiocicerchia/dockerfile-hardener/archive/refs/tags/v0.3.2.tar.gz"
+  sha256 "cf74b53fc0e475d475490968bdd77563a412373f1bc753758d982a7980ba8cba"
   license "Apache-2.0"
 
   depends_on "python@3.13"

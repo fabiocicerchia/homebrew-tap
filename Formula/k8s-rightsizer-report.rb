@@ -4,8 +4,8 @@ class K8sRightsizerReport < Formula
 
   desc "Turn live Kubernetes usage into PR-ready requests and limits"
   homepage "https://github.com/fabiocicerchia/k8s-rightsizer-report"
-  url "https://github.com/fabiocicerchia/k8s-rightsizer-report/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "694ea59dfb389974ec9d695b705a7ee231a58bfa3a43df6739ccd7072de4521b"
+  url "https://github.com/fabiocicerchia/k8s-rightsizer-report/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "6f9d4c4546b18c80e739f027841c98b9ab46900b3d5100207480970a31c72560"
   license "Apache-2.0"
 
   depends_on "python@3.13"

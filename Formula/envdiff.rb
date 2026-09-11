@@ -4,8 +4,8 @@ class Envdiff < Formula
 
   desc "Diff environment variables between two environments, safely"
   homepage "https://github.com/fabiocicerchia/envdiff"
-  url "https://github.com/fabiocicerchia/envdiff/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "7537cc74c4408dd8ed2779a2a5a1861799ca2abcefaece791fee911d544a1a59"
+  url "https://github.com/fabiocicerchia/envdiff/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "a9ef89f20c43b29f3f132bb79e53a9e5f84556b4d5be1118b930b2be47e2760e"
   license "Apache-2.0"
 
   depends_on "python@3.13"

@@ -4,8 +4,8 @@ class Scoville < Formula
 
   desc "Rate how dangerous a shell command is, before you run it"
   homepage "https://github.com/fabiocicerchia/scoville"
-  url "https://github.com/fabiocicerchia/scoville/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "0e56afaf3bdf0aa5e8fbdb3ecb76b2d3d208cd444eb2bf3aaa4e19981dbf6314"
+  url "https://github.com/fabiocicerchia/scoville/archive/refs/tags/v0.4.1.tar.gz"
+  sha256 "24afc687d6e8f9fa0f89b45ffea1f93b3c74d0f54621a4fbc554c48836734fa4"
   license "Apache-2.0"
 
   depends_on "python@3.13"
