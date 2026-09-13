@@ -4,8 +4,8 @@ class RbacAudit < Formula
 
   desc "Readable RBAC reports from a live Kubernetes cluster"
   homepage "https://github.com/fabiocicerchia/rbac-auditor"
-  url "https://github.com/fabiocicerchia/rbac-auditor/archive/refs/tags/v1.3.1.tar.gz"
-  sha256 "bd3e58f5f188abc163174497777b9d43ea5bb29c9521af74e7bcac89c5235d0b"
+  url "https://github.com/fabiocicerchia/rbac-auditor/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "a1cda7f2ee59e929a6a2f9f4b4b00640b868bc14d395a2699bf864377d7cab1c"
   license "Apache-2.0"
 
   depends_on "python@3.13"

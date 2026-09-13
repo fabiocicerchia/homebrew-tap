@@ -4,8 +4,8 @@ class BackupVerify < Formula
 
   desc "Prove that your backups restore, on a schedule"
   homepage "https://github.com/fabiocicerchia/backup-verify"
-  url "https://github.com/fabiocicerchia/backup-verify/archive/refs/tags/v0.4.2.tar.gz"
-  sha256 "abc28415ba2f19e96cdc18f654046b33d318daa00cef4bbecb0a87c13afcb4fa"
+  url "https://github.com/fabiocicerchia/backup-verify/archive/refs/tags/v0.4.3.tar.gz"
+  sha256 "9694c4ca22db6778e3ce8ddf53af06710beea3ffc279f60b60029a1094d649b4"
   license "Apache-2.0"
 
   depends_on "python@3.13"
