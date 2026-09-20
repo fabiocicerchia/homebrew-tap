@@ -4,8 +4,8 @@ class ClaudeKeepalive < Formula
 
   desc "Run claude and auto-resume after a usage-limit reset"
   homepage "https://github.com/fabiocicerchia/claude-keepalive"
-  url "https://github.com/fabiocicerchia/claude-keepalive/archive/refs/tags/v0.3.2.tar.gz"
-  sha256 "cfc9b3d80213cb0fcd8e2722d304a4051ff97d9cefaa9b409bca425d83d9ffd8"
+  url "https://github.com/fabiocicerchia/claude-keepalive/archive/refs/tags/v0.3.3.tar.gz"
+  sha256 "76006f37f0edc1ae15b18d0819155a547cd4e8e2e2d1616ed78b27a20819bb37"
   license "MIT"
 
   depends_on "python@3.13"

@@ -2,8 +2,8 @@
 class Netreport < Formula
   desc "One-shot connectivity snapshot for incident notes"
   homepage "https://github.com/fabiocicerchia/mtr-toolbox"
-  url "https://github.com/fabiocicerchia/mtr-toolbox/archive/refs/tags/v1.3.1.tar.gz"
-  sha256 "c8be9186c53db8010c92b73661d07ca9e6870419b4b77f4a92f6bed63b0adbff"
+  url "https://github.com/fabiocicerchia/mtr-toolbox/archive/refs/tags/v1.3.2.tar.gz"
+  sha256 "8fce89e908bc058c6a33c3e2ba314708ab4cfcc08c066bf5b41e9d8f97bfb40b"
   license "Apache-2.0"
 
   depends_on :linux
