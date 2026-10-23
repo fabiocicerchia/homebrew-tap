@@ -2,8 +2,8 @@
 class Chaosbox < Formula
   desc "Small, time-boxed chaos experiments"
   homepage "https://github.com/fabiocicerchia/chaos-toolbox"
-  url "https://github.com/fabiocicerchia/chaos-toolbox/archive/refs/tags/v2.0.3.tar.gz"
-  sha256 "ff6adf60926ff0a877c483f17bea72fbe676a685804d7e0b174858e243d7ad5c"
+  url "https://github.com/fabiocicerchia/chaos-toolbox/archive/refs/tags/v2.1.0.tar.gz"
+  sha256 "75384cbb7e643a491116e4da809ad71e96a0e75b1cf93149d2c7d398c21cdcdf"
   license "Apache-2.0"
 
   depends_on :linux
