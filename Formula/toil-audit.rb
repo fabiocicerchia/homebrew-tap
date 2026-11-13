@@ -4,8 +4,8 @@ class ToilAudit < Formula
 
   desc "Quantify the cost of babysitting CI/CD, in euros"
   homepage "https://github.com/fabiocicerchia/toil-audit"
-  url "https://github.com/fabiocicerchia/toil-audit/archive/refs/tags/v1.2.2.tar.gz"
-  sha256 "b15e31cb7f483944aed299734441ef48068af4ab8f3586e1a02a6ac2bf3ef79b"
+  url "https://github.com/fabiocicerchia/toil-audit/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "0942dcd548385b023b286f5a00e418ecb97b76c29142193fe35495a9267f3d1e"
   license "Apache-2.0"
 
   depends_on "python@3.13"
